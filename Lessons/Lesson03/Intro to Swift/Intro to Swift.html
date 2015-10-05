@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- common.css -->
+  <style>body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:16px 2%;color:#333;word-wrap:break-word}img{max-width:100%!important}code{margin:0;padding:.2em 0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before{letter-spacing:-.2em;content:"\00a0"}pre{margin:0}pre>code{margin:0;padding:0;font-size:100%;word-break:normal;background:0 0;border:0}blockquote{margin:0;padding:0 15px;color:#777;border-left:4px solid #ddd}hr{background-color:#ddd;border:0;height:1px;margin:15px 0}ol{list-style-type:decimal}ol ol,ul ol{list-style-type:lower-latin}ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-roman}table{border-spacing:0;border-collapse:collapse;margin-top:0;margin-bottom:16px}table th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{background-color:#fff;border-top:1px solid #ccc}table tr:nth-child(even){background-color:#f8f8f8}input[type=checkbox]{cursor:default;margin-right:.5em}.task-list-item{list-style-type:none}.task-list-item+.task-list-item{margin-top:3px}.task-list-item input{float:left;margin:.3em 1em .25em -1.6em;vertical-align:middle}</style>
+  <!-- exported.css -->
+  <style>
+    #nav{margin:5px 10px 10px;font-size:15px}
+    #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px}
+    #contentarea{font-size:15px;margin:16px 0}
+    .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 10px;line-height:1.4}
+    .code-cell{font-size:13px}
+    .latex-cell{white-space:pre-wrap;}
+  </style>
+  <!-- User CSS -->
+  <style> .text-cell {font-size: 14px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 14px;}.latex-cell {font-size: 14px;}</style>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true,
+        processClass: 'latex-cell'
+      },
+      "HTML-CSS": {
+        preferredFont: "STIX"
+      }
+    };
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/docco.min.css">
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="tex2jax_ignore">
+  
+  <div id="titlearea">
+    <h2>Intro to Swift</h2>
+  </div>
+  <div id="contentarea"><div class='cell text-cell'>Built with love by <b>@tedi</b> at <b>GA</b> for <b>MOB 04</b>.</div><pre class='cell code-cell'><code>// Single line comment
+
+/* Multi Line
+   comment example */
+   
+// Constant Declaration (inferred type). Remember IMMUTABLE.
+let name = &quot;Tedi&quot;
+
+// Variable Declaration (inferred type). Remember MUTABLE. 
+var age = 21
+
+// Type Annotation (string)
+var country: String = &quot;USA&quot;
+
+// Integers are whole numbers (no decimal)
+let questionOfLife: Int = 42
+
+// Floats and doubles: numbers with fractional components. Double has a precision of 15 decimal digits whereas double has a precision of 6. Double is inferred by default.
+let decimalNum: Double = 55.23
+
+// Booleans are true false values
+let truth = true
+var lie = false
+
+// Print something out to console
+print(&quot;Hello there&quot;)
+// Print without the ending new line character
+print(&quot;hello&quot;, terminator: &quot;&quot;)
+
+// String Interpolation, also known as string literal
+print(&quot;Hello \(name)&quot;)
+
+// Conditional statements
+var age = 59
+if age &gt;= 55 {
+  print(&quot;You can drink, but don&#39;t hurt yourself!&quot;)
+} else if age &gt;= 21 &amp;&amp; age &lt; 55 {
+  print(&quot;You can drink but not under senior discount&quot;)
+} else {
+  print(&quot;You can&#39;t drink at all.&quot;)
+}
+
+// While loops
+var num = 10
+while num &lt; 20 {
+  print(&quot;Counting at \(num)&quot;
+  num++
+}
+
+// For loop inclusive prints 1 to 10
+for i in 1..10 {
+  print(i)
+}
+
+// For loop with half open range operator. Prints 1 to 9
+for i in 1..&lt;10 {
+  print(i)
+}
+
+</code></pre></div>
+</body>
+</html>
