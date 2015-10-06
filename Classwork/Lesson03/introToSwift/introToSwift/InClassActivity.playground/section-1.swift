@@ -2,6 +2,7 @@
 // By Tedi at GA
 
 import Foundation
+import UIKit
 
 // TODO: Create two variables, name and age. Name is a string, age is an integer.
 
@@ -60,10 +61,52 @@ else
 }
 
 // TODO: Print out "Hello {whatever the value of name is}, your name is {however long the string name is} characters long!. Use countElements()
-print("Hello \(name), your name is \(countElements(\(name))) characters long!")
+print("Hello \(name), your name is \(name.characters.count) characters long!")
 
 // TODO: Print the sum of one hundred random numbers. Use rand() to generate random numbers.
+var finalNum = 0
+for x in 0...99
+{
+    var tempNum = rand()
+    finalNum = finalNum + Int(tempNum)
+}
+print("The sum of 100 random numbers is: \(finalNum)")
 
 // Bonus TO DO: Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.
+for x in 1...100
+{
+    if((x%5 == 0) && (x%3 == 0))
+    {
+        print("FizzBuzz")
+    }
+    else if(x%5 == 0)
+    {
+        print("Buzz")
+    }
+    else if(x%3 == 0)
+    {
+        print("Fizz")
+    }
+    else
+    {
+        print(x)
+    }
+}
 
 // BONUS TODO: The first fibonacci number is 0, the second is 1, the third is 1, the fourth is two, the fifth is 3, the sixth is 5, etc. The Xth fibonacci number is the sum of the X-1th fibonacci number and the X-2th fibonacci number. Print the 37th fibonacci number below
+func getFib(x: Int) -> Int
+{
+    var firstNum = 1
+    var secondNum = 1
+    var tempNum = firstNum + secondNum
+    for i in 3...x
+    {
+        tempNum = firstNum + secondNum
+        firstNum = secondNum
+        secondNum = tempNum
+        print(tempNum)
+    }
+    return(tempNum)
+}
+
+print(getFib(37))
