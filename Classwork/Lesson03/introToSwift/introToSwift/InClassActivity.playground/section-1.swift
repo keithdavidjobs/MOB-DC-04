@@ -2,7 +2,7 @@
 // By Tedi at GA
 
 import Foundation
-import UIKit
+//import UIKit
 
 // TODO: Create two variables, name and age. Name is a string, age is an integer.
 
@@ -42,8 +42,11 @@ if(age > 21)
 }
 
 // TODO: Print the first fifty multiples of seven minus one (e.g. the first three multiples are 7, 14, 21. The first three multiples minus one are 6, 13, 20)
-for x in 1...3
+var multiplesOf7Minus1 = 6
+for x in 1...50
 {
+    print(multiplesOf7Minus1)
+    multiplesOf7Minus1 = multiplesOf7Minus1 + 7
     print((x*7)-1)
 }
 
@@ -96,10 +99,11 @@ for x in 1...100
 // BONUS TODO: The first fibonacci number is 0, the second is 1, the third is 1, the fourth is two, the fifth is 3, the sixth is 5, etc. The Xth fibonacci number is the sum of the X-1th fibonacci number and the X-2th fibonacci number. Print the 37th fibonacci number below
 func getFib(x: Int) -> Int
 {
-    var firstNum = 1
+    var firstNum = 0
     var secondNum = 1
     var tempNum = firstNum + secondNum
-    for i in 3...x
+    //I started at 3 because the 1st 2 integers are known
+    for i in 2...(x)
     {
         tempNum = firstNum + secondNum
         firstNum = secondNum
