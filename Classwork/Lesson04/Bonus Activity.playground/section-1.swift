@@ -7,6 +7,13 @@ import UIKit
 // ex: func modifyVar(inout myString: String
 // ex: modifyVar(&passedParemeter)
 // Write a function changeName that prints out "Name changed to 'paremeter'" and that changes the value of the variable passed to it
+func changeName(inout name: String, newValue: String)
+{
+    name = newValue
+    print("Name changed to \(name)")
+}
+var name = "Keith"
+changeName(&name, newValue: "David")
 
 // Write a function to find the sum of any two multiples below any max value (make the default 2000)
 // call sould be something like this: addMultiples(mult1: 3, mult2: 5)
