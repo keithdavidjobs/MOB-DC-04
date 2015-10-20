@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E1n-DL-lxw">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="secretPlaybook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gs7-ut-awa">
+                                <rect key="frame" x="337" y="285" width="82" height="30"/>
+                                <state key="normal" title="Open roster"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="120" y="285" width="82" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showRoster:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nri-yP-7xY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8zL-2S-Foq" appends="YES" id="856-cd-DK2"/>
+                            <outletCollection property="gestureRecognizers" destination="rs1-21-AnP" appends="YES" id="Cv7-zK-w0w"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="SK5-4b-OVF"/>
+                    <connections>
+                        <segue destination="TL5-h8-JPj" kind="show" identifier="showRoster" id="IPr-oR-ohj"/>
+                        <segue destination="lkN-bY-9uM" kind="presentation" identifier="showNotes" id="hU1-fD-0fI"/>
+                        <segue destination="flr-cW-qIO" kind="presentation" identifier="showLockScreen" id="uC6-L2-JG3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="8zL-2S-Foq" userLabel="swipeLeftMain">
+                    <connections>
+                        <action selector="openNotes:" destination="BYZ-38-t0r" id="feP-Hd-5ld"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="rs1-21-AnP" userLabel="swipeRightMain">
+                    <connections>
+                        <action selector="showLockScreen:" destination="BYZ-38-t0r" id="Dnp-pq-sWP"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1380" y="267"/>
+        </scene>
+        <!--Roster Table View-->
+        <scene sceneID="wUC-Ls-wVu">
+            <objects>
+                <tableViewController id="TL5-h8-JPj" customClass="rosterTableView" customModule="secretPlaybook" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4p2-1U-lkS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="playerCell" id="zbz-TA-YZ1">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zbz-TA-YZ1" id="ll2-GW-8Vi">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="TL5-h8-JPj" id="9d6-NE-JdV"/>
+                            <outlet property="delegate" destination="TL5-h8-JPj" id="pTd-SE-OYB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="3BL-t4-dQC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ser-7M-gI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2082" y="267"/>
+        </scene>
+        <!--Lock Screen View Controller-->
+        <scene sceneID="hf2-sj-59H">
+            <objects>
+                <viewController id="flr-cW-qIO" customClass="lockScreenViewController" customModule="secretPlaybook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bqb-Wq-XrL"/>
+                        <viewControllerLayoutGuide type="bottom" id="iLn-5P-5Rv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wIc-Ap-bJp">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have been locked out" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYt-Vd-Cig">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="102" y="120" width="197" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gYt-Vd-Cig"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="gYt-Vd-Cig"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3tt-Qv-YvT" appends="YES" id="hA0-ou-8PW"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="showMainScreen" id="ORO-wp-QiW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M7U-OP-Ox3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="3tt-Qv-YvT" userLabel="swipeUp">
+                    <connections>
+                        <action selector="swipeUp:" destination="flr-cW-qIO" id="vUl-2V-AAq"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2097" y="985"/>
+        </scene>
+        <!--Notes View Controller-->
+        <scene sceneID="Tts-KR-xYU">
+            <objects>
+                <viewController id="lkN-bY-9uM" customClass="notesViewController" customModule="secretPlaybook" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="foK-q8-3PC"/>
+                        <viewControllerLayoutGuide type="bottom" id="OrA-mb-usF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eWI-ym-eiH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gle-3g-XO7">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="175" y="198" width="46" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMs-Um-laS">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Dismiss"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="171" y="321" width="54" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="dismissNotes:" destination="lkN-bY-9uM" eventType="touchUpInside" id="7nn-bt-nvc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Gle-3g-XO7"/>
+                                <exclude reference="CMs-Um-laS"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Gle-3g-XO7"/>
+                                <include reference="CMs-Um-laS"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2EL-KB-5v9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1380" y="985"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZkY-A7-Kgd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E1n-DL-lxw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AFo-QJ-Ofb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="E6H-v1-6Az"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ps-qv-JuO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="628.5" y="267"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="E6H-v1-6Az"/>
+    </inferredMetricsTieBreakers>
+</document>
