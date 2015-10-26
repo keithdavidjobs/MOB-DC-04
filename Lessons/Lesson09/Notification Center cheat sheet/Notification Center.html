@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- common.css -->
+  <style>body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:16px 2%;color:#333;word-wrap:break-word}img{max-width:100%!important}code{margin:0;padding:.2em 0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}code:after,code:before{letter-spacing:-.2em;content:"\00a0"}pre{margin:0}pre>code{margin:0;padding:0;font-size:100%;word-break:normal;background:0 0;border:0}blockquote{margin:0;padding:0 15px;color:#777;border-left:4px solid #ddd}hr{background-color:#ddd;border:0;height:1px;margin:15px 0}ol{list-style-type:decimal}ol ol,ul ol{list-style-type:lower-latin}ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-roman}table{border-spacing:0;border-collapse:collapse;margin-top:0;margin-bottom:16px}table th{font-weight:700}table td,table th{padding:6px 13px;border:1px solid #ddd}table tr{background-color:#fff;border-top:1px solid #ccc}table tr:nth-child(even){background-color:#f8f8f8}input[type=checkbox]{cursor:default;margin-right:.5em}.task-list-item{list-style-type:none}.task-list-item+.task-list-item{margin-top:3px}.task-list-item input{float:left;margin:.3em 1em .25em -1.6em;vertical-align:middle}</style>
+  <!-- exported.css -->
+  <style>
+    #nav{margin:5px 10px 10px;font-size:15px}
+    #titlearea{border-bottom:1px solid #ccc;font-size:17px;padding:10px}
+    #contentarea{font-size:15px;margin:16px 0}
+    .cell{outline:0;min-height:20px;margin:5px 0;padding:5px 10px;line-height:1.4}
+    .code-cell{font-size:13px}
+    .latex-cell{white-space:pre-wrap;}
+  </style>
+  <!-- User CSS -->
+  <style> .text-cell {font-size: 14px;}.code-cell {font-size: 12px;}.markdown-cell {font-size: 14px;}.latex-cell {font-size: 14px;}</style>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true,
+        processClass: 'latex-cell'
+      },
+      "HTML-CSS": {
+        preferredFont: "STIX"
+      }
+    };
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/docco.min.css">
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class="tex2jax_ignore">
+  
+  <div id="titlearea">
+    <h2>Notification Center</h2>
+  </div>
+  <div id="contentarea"><div class='cell text-cell'>iOS has a single Notification Center that’s available to us throughout our program. The notification center functions through a three step process:</div><div class='cell text-cell'>1. Add an observer for a certain event. The observer listens for the event and runs a method when that event is executed. Adding an observer requires 4 options:<div>&nbsp; - The observer: usually <b>self</b></div><div>&nbsp; - The selector: a string which is the function name we run when the event has been met, followed by a collon</div><div>&nbsp; -&nbsp;<span style="line-height: 1.4;">The name: a string of the key that we’ll be listening for in scenarios where we listen for custom observers. This is a predefined variable if it</span>’<span style="line-height: 1.4;">s an out of the box&nbsp;</span>iOS notification.</div><div>&nbsp; - Object: allows us to pass objects in our notification. You should not pass data through this object. This will usually be nil, unless you want to pass a custom message.</div></div><pre class='cell code-cell'><code>// Custom observer:
+NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: &quot;doSomethingFunction:&quot;,
+            name: &quot;doSomething&quot;,
+            object: nil)
+
+// Predefined observer
+NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: &quot;doSomething:&quot;,
+            name: UITextFieldTextDidChangeNotification,
+            object: nil)</code></pre><div class='cell text-cell'>2. Trigger the event when necessary. For example, when the user goes to a certain screen or when the user taps a button. This takes two options:<div>&nbsp; - The name of the notification, which is the same as the name defined in the observer.</div><div>&nbsp; - The object we pass through the notification. The same rule applies here as above. Try not to pass objects through notifications.</div></div><pre class='cell code-cell'><code>// Post notification example
+NSNotificationCenter.defaultCenter().postNotificationName(&quot;doSomething&quot;, object: nil)</code></pre><div class='cell text-cell'>3. Final step is to execute the function triggered by the event. This is the function defined in the selector part of the observer minus the colon. The only requirement here is that we must pass the notification paremeter in this function.&nbsp;</div><pre class='cell code-cell'><code>func doSomethingFunction(notification: NSNotification) {
+    print(&quot;triggered function from notification&quot;)
+}</code></pre><div class='cell text-cell'></div></div>
+</body>
+</html>
