@@ -76,3 +76,11 @@ struct Pigeon: Bird, CanFly
 }
 
 var genericBird = Pigeon(type: "ugly", beak: true)
+
+
+var tempArray: [Int]
+tempArray = [1, 2, 4, 6, 10, 13, 1]
+for i in tempArray
+{
+    print(i)
+}
