@@ -91,7 +91,24 @@ class ViewController: UIViewController {
         //count and display the cards for the human player
         for i in 0..<self.newGame.human.visibleCards.count
         {
-            self.humanCards.text! += String(self.newGame.human.visibleCards[i]) + ", "
+            var tempCard = String(self.newGame.human.visibleCards[i])
+            if(tempCard == "1")
+            {
+                tempCard = "A"
+            }
+            else if tempCard == "11"
+            {
+                tempCard = "J"
+            }
+            else if tempCard == "12"
+            {
+                tempCard = "Q"
+            }
+            else if tempCard == "13"
+            {
+                tempCard = "K"
+            }
+            self.humanCards.text! += tempCard + ", "
         }
         tempScoreCount = countScore(self.newGame.human.visibleCards)
         self.humanScore.text = String(tempScoreCount)
@@ -113,7 +130,24 @@ class ViewController: UIViewController {
         
         for i in 0..<self.newGame.dealer.visibleCards.count
         {
-            self.dealerCards.text! += String(self.newGame.dealer.visibleCards[i]) + ", "
+            var tempCard = String(self.newGame.dealer.visibleCards[i])
+            if(tempCard == "1")
+            {
+                tempCard = "A"
+            }
+            else if tempCard == "11"
+            {
+                tempCard = "J"
+            }
+            else if tempCard == "12"
+            {
+                tempCard = "Q"
+            }
+            else if tempCard == "13"
+            {
+                tempCard = "K"
+            }
+            self.dealerCards.text! += tempCard + ", "
         }
         self.dealerScore.text = String(countScore(self.newGame.dealer.visibleCards))
     }
