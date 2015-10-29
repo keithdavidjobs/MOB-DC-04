@@ -29,10 +29,10 @@ class ViewController: UIViewController, UpdateUsernameDelegate {
 
     @IBAction func changeName(sender: AnyObject)
     {
-        let secondVC = self.storyboard?.instantiateViewControllerWithIdentifier("newVC") as! VC2
-        
-        secondVC.delegate = self
-        self.presentViewController(secondVC, animated: true, completion: nil)
+//        let secondVC = self.storyboard?.instantiateViewControllerWithIdentifier("newVC") as! VC2
+//        
+//        secondVC.delegate = self
+//        self.presentViewController(secondVC, animated: true, completion: nil)
 //        self.performSegueWithIdentifier("changeNameSeque", sender: sender)
     }
     

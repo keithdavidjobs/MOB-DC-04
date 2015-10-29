@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Programmatic_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsG-me-hj2">
+                                <rect key="frame" x="251" y="305" width="46" height="30"/>
+                                <state key="normal" title="Move Yellow Box"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="143" y="306" width="115" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="moveYellowBox:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ATk-dP-gnI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erU-BP-G3Y">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Make Yellow Box Full Screen"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="103" y="387" width="194" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="makeYellowBoxFullScreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JVL-ep-Rod"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKj-8V-EcG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Show Face"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="155" y="482" width="75" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="showFace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yXe-jO-ON2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s90-CG-JuB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="169" y="535" width="46" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="erU-BP-G3Y"/>
+                                <exclude reference="ZKj-8V-EcG"/>
+                                <exclude reference="s90-CG-JuB"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="erU-BP-G3Y"/>
+                                <include reference="ZKj-8V-EcG"/>
+                                <include reference="s90-CG-JuB"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="makeFullYellow" destination="erU-BP-G3Y" id="Zwl-Br-oyz"/>
+                        <outlet property="moveYellow" destination="HsG-me-hj2" id="Ikf-gc-uRA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Face View Controller-->
+        <scene sceneID="w8D-cj-ux0">
+            <objects>
+                <viewController storyboardIdentifier="faceVC" id="fn5-ZT-6k3" customClass="FaceViewController" customModule="Programmatic_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MPv-OU-cTB"/>
+                        <viewControllerLayoutGuide type="bottom" id="HK2-18-bOM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6nZ-RV-b2C">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4P-fn-bNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="993" y="285"/>
+        </scene>
+        <!--Other Head View Controller-->
+        <scene sceneID="6aG-CA-4Hk">
+            <objects>
+                <viewController storyboardIdentifier="OtherVC" id="Kwl-hJ-bdU" customClass="OtherHeadViewController" customModule="Programmatic_Views" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wR9-5R-c3i"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hs8-Fv-byW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SZ9-yV-FN0">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XDZ-FA-xNK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1617" y="438"/>
+        </scene>
+    </scenes>
+</document>
