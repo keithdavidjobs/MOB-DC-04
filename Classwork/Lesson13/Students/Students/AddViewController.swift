@@ -36,6 +36,7 @@ class AddViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
+        print("textFieldShouldReturn")
         if textField == nameField {
             nameField.resignFirstResponder()
             locationField.becomeFirstResponder()
