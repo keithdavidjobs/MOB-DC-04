@@ -90,7 +90,7 @@ class ViewController: UIViewController {
     
     @IBAction func loadStory(sender: AnyObject) {
         let path = NSTemporaryDirectory() + "mystory.txt"
-        let myStory: NSString? = NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
+        let myStory: NSString? = try! NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
         if let returnedStory = myStory
         {
             print(returnedStory)
