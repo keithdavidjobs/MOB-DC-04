@@ -24,9 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var defaults = Dictionary<String, AnyObject>()
         defaults["settings_name"] = ""
         defaults["settings_slider"] = 0.5
-        //let defaults = [ "settings_name" : "", "settings_slider":  0.5]
         userDefaults.registerDefaults(defaults)
         userDefaults.synchronize()
+        
         return true
     }
 
