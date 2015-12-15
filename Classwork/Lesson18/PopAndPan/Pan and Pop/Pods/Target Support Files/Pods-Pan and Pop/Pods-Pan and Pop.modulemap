@@ -1,0 +1,6 @@
+framework module Pods_Pan_and_Pop {
+  umbrella header "Pods-Pan and Pop-umbrella.h"
+
+  export *
+  module * { export * }
+}

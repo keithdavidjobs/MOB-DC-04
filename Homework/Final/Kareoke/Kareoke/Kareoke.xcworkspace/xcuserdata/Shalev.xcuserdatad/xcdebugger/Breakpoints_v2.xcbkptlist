@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Kareoke/ViewController.swift"
+            timestampString = "471204254.808"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kareoke.ViewController.init (Kareoke.ViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Kareoke.ViewController"
+                  moduleName = "Kareoke"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shalev/GitHub/MOB-DC-04/Homework/Final/Kareoke/Kareoke/Kareoke/ViewController.swift"
+                  timestampString = "471204255.830842"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Kareoke.ViewController.init (Kareoke.ViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Swift.Optional&lt;Kareoke.ViewController&gt;"
+                  moduleName = "Kareoke"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Shalev/GitHub/MOB-DC-04/Homework/Final/Kareoke/Kareoke/Kareoke/ViewController.swift"
+                  timestampString = "471204255.831383"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

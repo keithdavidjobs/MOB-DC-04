@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pan_and_Pop" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="17806260-Basketball-court-floor-plan-on-parquet-background-Stock-Photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="F9H-Lu-jZa">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="basketball-soccerball-hybrid.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Dm-NA-PAf">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Oeq-mu-ZIg"/>
+                                    <constraint firstAttribute="width" constant="75" id="Px9-ac-dBA"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Oeq-mu-ZIg"/>
+                                        <exclude reference="Px9-ac-dBA"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Oeq-mu-ZIg"/>
+                                        <include reference="Px9-ac-dBA"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="F9H-Lu-jZa" secondAttribute="bottom" id="2mw-ug-BFQ"/>
+                            <constraint firstAttribute="trailing" secondItem="F9H-Lu-jZa" secondAttribute="trailing" id="3hd-CL-HzM"/>
+                            <constraint firstItem="F9H-Lu-jZa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Gzb-2b-xEm"/>
+                            <constraint firstItem="7Dm-NA-PAf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Iav-qh-Q4q"/>
+                            <constraint firstItem="F9H-Lu-jZa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ayH-em-mb3"/>
+                            <constraint firstItem="7Dm-NA-PAf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hXT-Q7-Xam"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="F9H-Lu-jZa"/>
+                                <exclude reference="7Dm-NA-PAf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3hd-CL-HzM"/>
+                                <exclude reference="Gzb-2b-xEm"/>
+                                <exclude reference="ayH-em-mb3"/>
+                                <exclude reference="Iav-qh-Q4q"/>
+                                <exclude reference="hXT-Q7-Xam"/>
+                                <exclude reference="2mw-ug-BFQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="F9H-Lu-jZa"/>
+                                <include reference="7Dm-NA-PAf"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3hd-CL-HzM"/>
+                                <include reference="Gzb-2b-xEm"/>
+                                <include reference="ayH-em-mb3"/>
+                                <include reference="Iav-qh-Q4q"/>
+                                <include reference="hXT-Q7-Xam"/>
+                                <include reference="2mw-ug-BFQ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="ball" destination="7Dm-NA-PAf" id="h9Z-QX-bor"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="357"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="17806260-Basketball-court-floor-plan-on-parquet-background-Stock-Photo.jpg" width="821" height="1300"/>
+        <image name="basketball-soccerball-hybrid.png" width="248" height="248"/>
+    </resources>
+</document>

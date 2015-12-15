@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7xN-JW-hkY">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherNotifications" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cGq-Bx-5pp">
+                                <rect key="frame" x="20" y="144" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ulF-Gf-re9">
+                                <rect key="frame" x="20" y="198" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1G-0v-FME">
+                                <rect key="frame" x="20" y="319" width="560" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.15893070279999999" blue="0.083619020899999993" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get current weather">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getCurrentWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2qp-aY-3IR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOr-mY-OFP">
+                                <rect key="frame" x="20" y="370" width="560" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.62906611599999995" blue="0.17399470450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Create weather reminder">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="gbM-Fa-Uxt" kind="show" id="tiT-WA-Et8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYh-Yd-Pi3">
+                                <rect key="frame" x="20" y="91" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.04320707604" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="XYh-Yd-Pi3" secondAttribute="trailing" id="1Iv-Wj-hSP"/>
+                            <constraint firstItem="ulF-Gf-re9" firstAttribute="top" secondItem="cGq-Bx-5pp" secondAttribute="bottom" constant="24" id="BBL-cK-Kov"/>
+                            <constraint firstItem="ulF-Gf-re9" firstAttribute="leading" secondItem="cGq-Bx-5pp" secondAttribute="leading" id="GGf-ae-JD7"/>
+                            <constraint firstItem="e1G-0v-FME" firstAttribute="top" secondItem="ulF-Gf-re9" secondAttribute="bottom" constant="91" id="HWh-GD-ilA"/>
+                            <constraint firstItem="e1G-0v-FME" firstAttribute="leading" secondItem="ulF-Gf-re9" secondAttribute="leading" id="J88-MK-04f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cGq-Bx-5pp" secondAttribute="trailing" id="V30-81-0mg"/>
+                            <constraint firstItem="SOr-mY-OFP" firstAttribute="top" secondItem="e1G-0v-FME" secondAttribute="bottom" constant="21" id="ZoW-NK-XRv"/>
+                            <constraint firstItem="e1G-0v-FME" firstAttribute="trailing" secondItem="ulF-Gf-re9" secondAttribute="trailing" id="a86-su-eHt"/>
+                            <constraint firstItem="SOr-mY-OFP" firstAttribute="leading" secondItem="e1G-0v-FME" secondAttribute="leading" id="ekd-KX-K5v"/>
+                            <constraint firstItem="ulF-Gf-re9" firstAttribute="trailing" secondItem="cGq-Bx-5pp" secondAttribute="trailing" id="f8P-sk-4fo"/>
+                            <constraint firstItem="SOr-mY-OFP" firstAttribute="trailing" secondItem="e1G-0v-FME" secondAttribute="trailing" id="hvj-VT-p5W"/>
+                            <constraint firstItem="XYh-Yd-Pi3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jtI-yb-Hgf"/>
+                            <constraint firstItem="cGq-Bx-5pp" firstAttribute="top" secondItem="XYh-Yd-Pi3" secondAttribute="bottom" constant="32" id="t4W-XF-1iL"/>
+                            <constraint firstItem="XYh-Yd-Pi3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="27" id="u1c-Uh-1NC"/>
+                            <constraint firstItem="cGq-Bx-5pp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="xTk-cI-8tP"/>
+                            <constraint firstItem="cGq-Bx-5pp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="xka-Di-6gJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="xka-Di-6gJ"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="BEb-dr-6aY"/>
+                    <connections>
+                        <outlet property="cityText" destination="cGq-Bx-5pp" id="4WJ-rZ-kzb"/>
+                        <outlet property="resultsLabel" destination="XYh-Yd-Pi3" id="9eJ-Qf-OFd"/>
+                        <outlet property="stateText" destination="ulF-Gf-re9" id="kp9-hz-kIe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="357"/>
+        </scene>
+        <!--Set Reminder View Controller-->
+        <scene sceneID="Ka0-KY-Pg3">
+            <objects>
+                <viewController id="gbM-Fa-Uxt" customClass="SetReminderViewController" customModule="WeatherNotifications" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Gw-TF-qBj"/>
+                        <viewControllerLayoutGuide type="bottom" id="NTG-Rv-hAd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Pn-Ob-TfT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="G7R-3M-lLc">
+                                <rect key="frame" x="0.0" y="64" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="471226500.91265798">
+                                    <!--2015-12-08 00:15:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCr-M4-YBO">
+                                <rect key="frame" x="20" y="367" width="560" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.15893070279999999" blue="0.083619020899999993" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Set Reminder">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setReminder:" destination="gbM-Fa-Uxt" eventType="touchUpInside" id="ppt-Tb-cQi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fCr-M4-YBO" secondAttribute="trailing" id="1OD-ky-o6a"/>
+                            <constraint firstItem="G7R-3M-lLc" firstAttribute="top" secondItem="0Gw-TF-qBj" secondAttribute="bottom" id="HCu-G7-jNI"/>
+                            <constraint firstItem="fCr-M4-YBO" firstAttribute="top" secondItem="G7R-3M-lLc" secondAttribute="bottom" constant="87" id="P93-YO-nfW"/>
+                            <constraint firstItem="G7R-3M-lLc" firstAttribute="leading" secondItem="4Pn-Ob-TfT" secondAttribute="leading" id="PYl-7l-UFk"/>
+                            <constraint firstItem="fCr-M4-YBO" firstAttribute="leading" secondItem="4Pn-Ob-TfT" secondAttribute="leadingMargin" id="Tbd-9Q-Y0N"/>
+                            <constraint firstAttribute="trailing" secondItem="G7R-3M-lLc" secondAttribute="trailing" id="iss-vD-Shs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateField" destination="G7R-3M-lLc" id="9Ry-sx-1yY"/>
+                        <outlet property="setReminderButton" destination="fCr-M4-YBO" id="Gvh-Pq-8ly"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3ih-P0-SE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="357"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0qy-0F-eb8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7xN-JW-hkY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JQG-wJ-gwj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oDp-Vn-AgT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RDN-JB-EKE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="357"/>
+        </scene>
+    </scenes>
+</document>

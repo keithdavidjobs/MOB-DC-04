@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Maps_and_Locations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aoh-8g-gLO">
+                                <rect key="frame" x="0.0" y="20" width="600" height="300"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wn8-y4-vKE">
+                                <rect key="frame" x="203" y="330" width="195" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Show User Location On Map">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FP8-6g-V7t"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yf6-RC-431">
+                                <rect key="frame" x="175" y="370" width="252" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Stop Showing User Location On Map">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopShowingCurrenctLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bOp-cF-ro8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwp-18-g9O">
+                                <rect key="frame" x="220" y="410" width="161" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get Address (Geocode)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getUserAddress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fra-e0-Va7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRx-Qo-GK5">
+                                <rect key="frame" x="268" y="456" width="68" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Find Food">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="findFood:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nyy-DK-zdb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4qi-YU-8Aa">
+                                <rect key="frame" x="255" y="503" width="95" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Open In Maps">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openInMaps:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mHC-ST-Eqh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zD-oV-bsB">
+                                <rect key="frame" x="254" y="550" width="98" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get Directions">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getDirections:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mx-Lr-99J"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aoh-8g-gLO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2H4-3m-1gw"/>
+                            <constraint firstItem="qwp-18-g9O" firstAttribute="top" secondItem="Yf6-RC-431" secondAttribute="bottom" constant="10" id="6mb-CI-f4T"/>
+                            <constraint firstItem="Yf6-RC-431" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BiR-T8-CRu"/>
+                            <constraint firstItem="4qi-YU-8Aa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CFC-k8-VsV"/>
+                            <constraint firstItem="Yf6-RC-431" firstAttribute="top" secondItem="Wn8-y4-vKE" secondAttribute="bottom" constant="10" id="DpV-Sd-POX"/>
+                            <constraint firstItem="aoh-8g-gLO" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="KdZ-Kt-5yE"/>
+                            <constraint firstItem="3zD-oV-bsB" firstAttribute="top" secondItem="4qi-YU-8Aa" secondAttribute="bottom" constant="10" id="Lgg-KM-OTF"/>
+                            <constraint firstItem="3zD-oV-bsB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cDF-ti-D6I"/>
+                            <constraint firstItem="nRx-Qo-GK5" firstAttribute="top" secondItem="qwp-18-g9O" secondAttribute="bottom" constant="10" id="cYp-oz-7pM"/>
+                            <constraint firstItem="qwp-18-g9O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ch6-3c-2Mr"/>
+                            <constraint firstItem="Wn8-y4-vKE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e7W-Kh-iiY"/>
+                            <constraint firstItem="aoh-8g-gLO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="el3-U3-Y5d"/>
+                            <constraint firstAttribute="trailing" secondItem="aoh-8g-gLO" secondAttribute="trailing" id="fDl-k0-2dJ"/>
+                            <constraint firstItem="4qi-YU-8Aa" firstAttribute="top" secondItem="nRx-Qo-GK5" secondAttribute="bottom" constant="10" id="iTz-ST-JQd"/>
+                            <constraint firstItem="Wn8-y4-vKE" firstAttribute="top" secondItem="aoh-8g-gLO" secondAttribute="bottom" constant="10" id="kUu-O9-box"/>
+                            <constraint firstItem="nRx-Qo-GK5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xSp-QF-z3N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="aoh-8g-gLO" id="aWP-JQ-Ys1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="285"/>
+        </scene>
+    </scenes>
+</document>
