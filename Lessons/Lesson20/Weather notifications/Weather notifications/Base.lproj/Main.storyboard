@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jRM-aq-Laj">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_notifications" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-8y-Eoh">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Afr-Up-HJi">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTN-XN-YFb">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get current weather">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="getCurrentWeather:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UQq-sa-Ehv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMa-j2-gU0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.63529411759999999" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Create weather reminder">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5gl-wM-RZ0" kind="show" id="Pgp-tv-8jk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agf-IV-AOT">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="Kmw-Qx-aPQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Kmw-Qx-aPQ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Kmw-Qx-aPQ"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1176470588" green="0.56862745100000001" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Afr-Up-HJi" firstAttribute="leading" secondItem="cyZ-8y-Eoh" secondAttribute="leading" id="0aC-jS-vtw"/>
+                            <constraint firstItem="rMa-j2-gU0" firstAttribute="top" secondItem="kTN-XN-YFb" secondAttribute="bottom" constant="26" id="5n8-6I-pIt"/>
+                            <constraint firstItem="Afr-Up-HJi" firstAttribute="top" secondItem="cyZ-8y-Eoh" secondAttribute="bottom" constant="28" id="BCK-mv-BqI"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="cyZ-8y-Eoh" secondAttribute="leading" id="C3a-hC-Jtr"/>
+                            <constraint firstItem="Agf-IV-AOT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="DI8-dc-Wew"/>
+                            <constraint firstItem="Afr-Up-HJi" firstAttribute="trailing" secondItem="cyZ-8y-Eoh" secondAttribute="trailing" id="ETg-Pj-cIo"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="rMa-j2-gU0" secondAttribute="leading" id="FZX-8w-dGX"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Agf-IV-AOT" secondAttribute="leading" id="Gk7-lJ-Ws5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rMa-j2-gU0" secondAttribute="trailing" id="PMz-f0-6GV"/>
+                            <constraint firstItem="cyZ-8y-Eoh" firstAttribute="top" secondItem="Agf-IV-AOT" secondAttribute="bottom" constant="18" id="TfM-gp-efW"/>
+                            <constraint firstItem="kTN-XN-YFb" firstAttribute="top" secondItem="Afr-Up-HJi" secondAttribute="bottom" constant="54" id="Wmr-X9-fHs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Agf-IV-AOT" secondAttribute="trailing" id="hlh-tN-Omm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cyZ-8y-Eoh" secondAttribute="trailing" id="nIj-Vs-orB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kTN-XN-YFb" secondAttribute="trailing" id="oho-7V-G20"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kTN-XN-YFb" secondAttribute="leading" id="u3z-hY-HEN"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cyZ-8y-Eoh"/>
+                                <exclude reference="Afr-Up-HJi"/>
+                                <exclude reference="kTN-XN-YFb"/>
+                                <exclude reference="rMa-j2-gU0"/>
+                                <exclude reference="Agf-IV-AOT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0aC-jS-vtw"/>
+                                <exclude reference="BCK-mv-BqI"/>
+                                <exclude reference="ETg-Pj-cIo"/>
+                                <exclude reference="C3a-hC-Jtr"/>
+                                <exclude reference="TfM-gp-efW"/>
+                                <exclude reference="nIj-Vs-orB"/>
+                                <exclude reference="Wmr-X9-fHs"/>
+                                <exclude reference="oho-7V-G20"/>
+                                <exclude reference="u3z-hY-HEN"/>
+                                <exclude reference="5n8-6I-pIt"/>
+                                <exclude reference="FZX-8w-dGX"/>
+                                <exclude reference="PMz-f0-6GV"/>
+                                <exclude reference="DI8-dc-Wew"/>
+                                <exclude reference="Gk7-lJ-Ws5"/>
+                                <exclude reference="hlh-tN-Omm"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cyZ-8y-Eoh"/>
+                                <include reference="Afr-Up-HJi"/>
+                                <include reference="kTN-XN-YFb"/>
+                                <include reference="rMa-j2-gU0"/>
+                                <include reference="Agf-IV-AOT"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="0aC-jS-vtw"/>
+                                <include reference="BCK-mv-BqI"/>
+                                <include reference="ETg-Pj-cIo"/>
+                                <include reference="C3a-hC-Jtr"/>
+                                <include reference="TfM-gp-efW"/>
+                                <include reference="nIj-Vs-orB"/>
+                                <include reference="Wmr-X9-fHs"/>
+                                <include reference="oho-7V-G20"/>
+                                <include reference="u3z-hY-HEN"/>
+                                <include reference="5n8-6I-pIt"/>
+                                <include reference="FZX-8w-dGX"/>
+                                <include reference="PMz-f0-6GV"/>
+                                <include reference="DI8-dc-Wew"/>
+                                <include reference="Gk7-lJ-Ws5"/>
+                                <include reference="hlh-tN-Omm"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="CFo-1J-QdC"/>
+                    <connections>
+                        <outlet property="weatherCity" destination="cyZ-8y-Eoh" id="RgP-mE-fwg"/>
+                        <outlet property="weatherInfoLabel" destination="Agf-IV-AOT" id="f6v-mF-S1r"/>
+                        <outlet property="weatherState" destination="Afr-Up-HJi" id="RR3-4C-j7k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1458" y="389"/>
+        </scene>
+        <!--Set Reminder View Controller-->
+        <scene sceneID="xIw-fG-aKs">
+            <objects>
+                <viewController id="5gl-wM-RZ0" customClass="SetReminderViewController" customModule="Weather_notifications" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ImD-GW-3LT"/>
+                        <viewControllerLayoutGuide type="bottom" id="RBk-0R-cYa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ITH-K5-WBc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="b14-Dh-IDj">
+                                <rect key="frame" x="-160" y="-108" width="320" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="oN7-3c-3Gk"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="471226324.36661601">
+                                    <!--2015-12-08 00:12:04 +0000-->
+                                </date>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="oN7-3c-3Gk"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="oN7-3c-3Gk"/>
+                                    </mask>
+                                </variation>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rkb-jr-SDP">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Set Reminder">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="setReminder:" destination="5gl-wM-RZ0" eventType="touchUpInside" id="xXA-d8-TfV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1176470588" green="0.56862745100000001" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Rkb-jr-SDP" firstAttribute="top" secondItem="b14-Dh-IDj" secondAttribute="bottom" constant="73" id="AdV-z8-xyh"/>
+                            <constraint firstItem="b14-Dh-IDj" firstAttribute="top" secondItem="ImD-GW-3LT" secondAttribute="bottom" id="Jm3-Fz-Pux"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rkb-jr-SDP" secondAttribute="trailing" id="Tlr-z9-hkx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Rkb-jr-SDP" secondAttribute="leading" id="gtb-od-L2t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b14-Dh-IDj" secondAttribute="trailing" constant="-20" id="of3-TW-D4B">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="b14-Dh-IDj" firstAttribute="leading" secondItem="ITH-K5-WBc" secondAttribute="leadingMargin" id="stK-Q7-ChY"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="b14-Dh-IDj"/>
+                                <exclude reference="Rkb-jr-SDP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="AdV-z8-xyh"/>
+                                <exclude reference="Tlr-z9-hkx"/>
+                                <exclude reference="gtb-od-L2t"/>
+                                <exclude reference="Jm3-Fz-Pux"/>
+                                <exclude reference="of3-TW-D4B"/>
+                                <exclude reference="stK-Q7-ChY"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="b14-Dh-IDj"/>
+                                <include reference="Rkb-jr-SDP"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="AdV-z8-xyh"/>
+                                <include reference="Tlr-z9-hkx"/>
+                                <include reference="gtb-od-L2t"/>
+                                <include reference="Jm3-Fz-Pux"/>
+                                <include reference="of3-TW-D4B"/>
+                                <include reference="stK-Q7-ChY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="b14-Dh-IDj" id="79g-0v-h09"/>
+                        <outlet property="setReminderButton" destination="Rkb-jr-SDP" id="Vlf-4U-EGz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UMO-Ph-xyU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2181" y="388"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CTi-Tk-pHe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jRM-aq-Laj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vwU-2e-eh7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Xba-cs-wPm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQG-Ag-Vnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="540" y="389"/>
+        </scene>
+    </scenes>
+</document>
