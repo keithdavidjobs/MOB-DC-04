@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C0BFC9CB3216B21EE62CBB9 /* Pods_caraoke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E9BE1CDD258E65BF1E17C67 /* Pods_caraoke.framework */; };
+		1DC1ADCB1C2881F800171D96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1ADCA1C2881F800171D96 /* AppDelegate.swift */; };
+		1DC1ADCD1C2881F800171D96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1ADCC1C2881F800171D96 /* ViewController.swift */; };
+		1DC1ADD01C2881F800171D96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC1ADCE1C2881F800171D96 /* Main.storyboard */; };
+		1DC1ADD21C2881F800171D96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DC1ADD11C2881F800171D96 /* Assets.xcassets */; };
+		1DC1ADD51C2881F800171D96 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DC1ADD31C2881F800171D96 /* LaunchScreen.storyboard */; };
+		1DC1ADE01C2883B000171D96 /* Car Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC1ADDD1C2883B000171D96 /* Car Icon.png */; settings = {ASSET_TAGS = (); }; };
+		1DC1ADE11C2883B000171D96 /* Iphone microphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC1ADDE1C2883B000171D96 /* Iphone microphone.png */; settings = {ASSET_TAGS = (); }; };
+		1DC1ADE21C2883B000171D96 /* Microphone-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DC1ADDF1C2883B000171D96 /* Microphone-icon.png */; settings = {ASSET_TAGS = (); }; };
+		1DC1ADE41C28883400171D96 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1ADE31C28883400171D96 /* SearchViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1DC1ADE61C288E8200171D96 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1ADE51C288E8200171D96 /* SearchTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		1DC1ADE81C289DD000171D96 /* SingingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1ADE71C289DD000171D96 /* SingingViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		1DC1ADEA1C289E7F00171D96 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DC1ADE91C289E7F00171D96 /* AVKit.framework */; };
+		1DC1ADEC1C28B15800171D96 /* VideoDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC1ADEB1C28B15800171D96 /* VideoDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1DC1ADC71C2881F800171D96 /* caraoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = caraoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DC1ADCA1C2881F800171D96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1DC1ADCC1C2881F800171D96 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1DC1ADCF1C2881F800171D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1DC1ADD11C2881F800171D96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1DC1ADD41C2881F800171D96 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1DC1ADD61C2881F800171D96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DC1ADDD1C2883B000171D96 /* Car Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Car Icon.png"; sourceTree = "<group>"; };
+		1DC1ADDE1C2883B000171D96 /* Iphone microphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Iphone microphone.png"; sourceTree = "<group>"; };
+		1DC1ADDF1C2883B000171D96 /* Microphone-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Microphone-icon.png"; sourceTree = "<group>"; };
+		1DC1ADE31C28883400171D96 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1DC1ADE51C288E8200171D96 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		1DC1ADE71C289DD000171D96 /* SingingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingingViewController.swift; sourceTree = "<group>"; };
+		1DC1ADE91C289E7F00171D96 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		1DC1ADEB1C28B15800171D96 /* VideoDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDelegate.swift; sourceTree = "<group>"; };
+		6E9BE1CDD258E65BF1E17C67 /* Pods_caraoke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_caraoke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E5B556CAEE9EB8B5283F65B /* Pods-caraoke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-caraoke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-caraoke/Pods-caraoke.debug.xcconfig"; sourceTree = "<group>"; };
+		F75B088EF774C91DA473E345 /* Pods-caraoke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-caraoke.release.xcconfig"; path = "Pods/Target Support Files/Pods-caraoke/Pods-caraoke.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1DC1ADC41C2881F800171D96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC1ADEA1C289E7F00171D96 /* AVKit.framework in Frameworks */,
+				0C0BFC9CB3216B21EE62CBB9 /* Pods_caraoke.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DC1ADBE1C2881F800171D96 = {
+			isa = PBXGroup;
+			children = (
+				1DC1ADC91C2881F800171D96 /* caraoke */,
+				1DC1ADC81C2881F800171D96 /* Products */,
+				E247C7E0BBF9BDA58EBB4C24 /* Pods */,
+				D15FB07CFB126BEB92810AB7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1DC1ADC81C2881F800171D96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1DC1ADC71C2881F800171D96 /* caraoke.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1DC1ADC91C2881F800171D96 /* caraoke */ = {
+			isa = PBXGroup;
+			children = (
+				1DC1ADDC1C2883A600171D96 /* images */,
+				1DC1ADCA1C2881F800171D96 /* AppDelegate.swift */,
+				1DC1ADCC1C2881F800171D96 /* ViewController.swift */,
+				1DC1ADE31C28883400171D96 /* SearchViewController.swift */,
+				1DC1ADE71C289DD000171D96 /* SingingViewController.swift */,
+				1DC1ADEB1C28B15800171D96 /* VideoDelegate.swift */,
+				1DC1ADE51C288E8200171D96 /* SearchTableViewCell.swift */,
+				1DC1ADCE1C2881F800171D96 /* Main.storyboard */,
+				1DC1ADD11C2881F800171D96 /* Assets.xcassets */,
+				1DC1ADD31C2881F800171D96 /* LaunchScreen.storyboard */,
+				1DC1ADD61C2881F800171D96 /* Info.plist */,
+			);
+			path = caraoke;
+			sourceTree = "<group>";
+		};
+		1DC1ADDC1C2883A600171D96 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1DC1ADDD1C2883B000171D96 /* Car Icon.png */,
+				1DC1ADDE1C2883B000171D96 /* Iphone microphone.png */,
+				1DC1ADDF1C2883B000171D96 /* Microphone-icon.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		D15FB07CFB126BEB92810AB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DC1ADE91C289E7F00171D96 /* AVKit.framework */,
+				6E9BE1CDD258E65BF1E17C67 /* Pods_caraoke.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E247C7E0BBF9BDA58EBB4C24 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E5B556CAEE9EB8B5283F65B /* Pods-caraoke.debug.xcconfig */,
+				F75B088EF774C91DA473E345 /* Pods-caraoke.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1DC1ADC61C2881F800171D96 /* caraoke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DC1ADD91C2881F800171D96 /* Build configuration list for PBXNativeTarget "caraoke" */;
+			buildPhases = (
+				935DA6AB214975577CA1D777 /* Check Pods Manifest.lock */,
+				1DC1ADC31C2881F800171D96 /* Sources */,
+				1DC1ADC41C2881F800171D96 /* Frameworks */,
+				1DC1ADC51C2881F800171D96 /* Resources */,
+				47BEE38773A9E161B51B7E25 /* Embed Pods Frameworks */,
+				C58F3D9FC62CF70DE69FE76B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = caraoke;
+			productName = caraoke;
+			productReference = 1DC1ADC71C2881F800171D96 /* caraoke.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1DC1ADBF1C2881F800171D96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Keith;
+				TargetAttributes = {
+					1DC1ADC61C2881F800171D96 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 1DC1ADC21C2881F800171D96 /* Build configuration list for PBXProject "caraoke" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1DC1ADBE1C2881F800171D96;
+			productRefGroup = 1DC1ADC81C2881F800171D96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1DC1ADC61C2881F800171D96 /* caraoke */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DC1ADC51C2881F800171D96 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC1ADD51C2881F800171D96 /* LaunchScreen.storyboard in Resources */,
+				1DC1ADD21C2881F800171D96 /* Assets.xcassets in Resources */,
+				1DC1ADE01C2883B000171D96 /* Car Icon.png in Resources */,
+				1DC1ADE11C2883B000171D96 /* Iphone microphone.png in Resources */,
+				1DC1ADE21C2883B000171D96 /* Microphone-icon.png in Resources */,
+				1DC1ADD01C2881F800171D96 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47BEE38773A9E161B51B7E25 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-caraoke/Pods-caraoke-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		935DA6AB214975577CA1D777 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C58F3D9FC62CF70DE69FE76B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-caraoke/Pods-caraoke-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DC1ADC31C2881F800171D96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DC1ADEC1C28B15800171D96 /* VideoDelegate.swift in Sources */,
+				1DC1ADE41C28883400171D96 /* SearchViewController.swift in Sources */,
+				1DC1ADE61C288E8200171D96 /* SearchTableViewCell.swift in Sources */,
+				1DC1ADCD1C2881F800171D96 /* ViewController.swift in Sources */,
+				1DC1ADCB1C2881F800171D96 /* AppDelegate.swift in Sources */,
+				1DC1ADE81C289DD000171D96 /* SingingViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1DC1ADCE1C2881F800171D96 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DC1ADCF1C2881F800171D96 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1DC1ADD31C2881F800171D96 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DC1ADD41C2881F800171D96 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1DC1ADD71C2881F800171D96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1DC1ADD81C2881F800171D96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1DC1ADDA1C2881F800171D96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E5B556CAEE9EB8B5283F65B /* Pods-caraoke.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = caraoke/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifeofpeaceful.caraoke;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1DC1ADDB1C2881F800171D96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F75B088EF774C91DA473E345 /* Pods-caraoke.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = caraoke/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lifeofpeaceful.caraoke;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DC1ADC21C2881F800171D96 /* Build configuration list for PBXProject "caraoke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC1ADD71C2881F800171D96 /* Debug */,
+				1DC1ADD81C2881F800171D96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DC1ADD91C2881F800171D96 /* Build configuration list for PBXNativeTarget "caraoke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DC1ADDA1C2881F800171D96 /* Debug */,
+				1DC1ADDB1C2881F800171D96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1DC1ADBF1C2881F800171D96 /* Project object */;
+}
